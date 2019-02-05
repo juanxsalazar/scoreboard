@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Scoreboard</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/screen.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
-    <h1 class='hello-world'></h1>
+    <h1>My Score Board</h1>
+    <section class="score-area">
+      <section class="team1">
+        <h2 class="team1Name"></h2>
+        <p class="onescore"></p>
+      </section>
+      <section>
+        <h2 class="team2Name"></h2>
+        <p class="twoscore"></p>
+      </section>
+    </section>
+    <section class="update-score">
+      <section >
+        <section class="team-name">
+          update team 1 name
+          <input class="team1new" type="text"/>
+          <button class="update-team-1-name">Update</button>
+        </section>
+        <section>
+          update team 1 score
+          <button class="first-add-one-button">add 1</button>
+          <button class="first-minus-one-button">subtract 1</button>
+        </section>
+      </section>
+      <section>
+        <section class="team-name">
+          update team 2 name
+          <input class="team2new" type="text" />
+          <button class="update-team-2-name">Update</button>
+        </section>
+        <section>
+          update team 2 score
+          <button class="sec-add-one-button">add 1</button>
+          <button class="sec-minus-one-button">subtract 1</button>
+        </section>
+      </section>
+    </section>
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>
