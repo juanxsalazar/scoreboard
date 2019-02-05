@@ -38,12 +38,18 @@ const increaseCounterTwo = () => {
 }
 // Decrease score Numbers
 const decreaseCounterOne = () => {
+  if (counterone <= 0) {
+    return
+  }
   console.log('button clicked')
   counterone = counterone-1
   document.querySelector('.onescore').textContent = counterone
 }
 
 const decreaseCounterTwo = () => {
+  if (countertwo <= 0) {
+    return
+  }
   console.log('button clicked')
   countertwo = countertwo-1
   document.querySelector('.twoscore').textContent = countertwo
