@@ -26,6 +26,22 @@ const updateName2 = () => {
 const increaseCounterOne = () => {
   console.log('button clicked')
   counterone = counterone + 1
+    // add logic to display
+  if (counterone % 2 == 0) {
+    // number is even
+    //display message
+document.querySelector('.output').textContent = 'The number is even.'
+ // add green text
+ document.querySelector('p').classList.remove('blue-text')
+ document.querySelector('p').classList.add('green-text')
+}
+  else {
+    document.querySelector('.output').textContent = 'The number is odd'
+    //number is odd
+    document.querySelector('p').classList.remove('green-text')
+    document.querySelector('p').classList.add('blue-text')
+  }
+
   console.log(counterone)
   document.querySelector('.onescore').textContent = counterone
 }
