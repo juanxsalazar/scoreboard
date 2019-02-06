@@ -1,4 +1,4 @@
-// variables
+// variables when page starts
 let counterone = 0
 let countertwo = 0
 let team1Name = 'Team 1'
@@ -26,12 +26,14 @@ const updateName2 = () => {
 
 // Increase score numbers and win
 const increaseCounterOne = () => {
-  if (counterone >=21) {
-    document.querySelector('.winner').textContent = team1Name+' Wins!!!'
-  return
-  }    
+  if (counterone >= 21) {
+    return}
 
-   
+    if (counterone == 20) { document.querySelector('.winner').textContent = team1Name+' Wins!!!'
+  }
+  if (countertwo >= 21) {
+    return
+  }
   console.log('button clicked')
   counterone = counterone + 1
   console.log(counterone)
@@ -40,9 +42,14 @@ const increaseCounterOne = () => {
 
 const increaseCounterTwo = () => {
   if (countertwo >= 21) {
-    document.querySelector('.winner').textContent = team2Name+' Wins!!!'
     return
   }
+
+  if (countertwo == 20) { document.querySelector('.winner').textContent = team2Name+' Wins!!!'
+}
+if (counterone >= 21) {
+  return
+}
   console.log('button clicked')
   countertwo = countertwo + 1
   console.log(countertwo)
@@ -56,6 +63,10 @@ const decreaseCounterOne = () => {
   if (counterone >= 21) {
     return
   }
+  if (countertwo >= 21) {
+    return
+  }
+  
   console.log('button clicked')
   counterone = counterone-1
   document.querySelector('.onescore').textContent = counterone
@@ -66,6 +77,9 @@ const decreaseCounterTwo = () => {
     return
   }
   if (countertwo >= 21) {
+    return
+  }
+  if (counterone >= 21) {
     return
   }
   console.log('button clicked')
